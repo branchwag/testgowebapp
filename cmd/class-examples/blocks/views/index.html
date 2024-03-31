@@ -5,11 +5,17 @@
     <title>My First Webpage</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale-1" />
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="../../../../css/index.css" rel="stylesheet" />
+    <script
+      src="https://unpkg.com/htmx.org@1.9.11"
+      integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
     Count {{ .Count }}
+    <button hx-target="body" hx-post="/count">Count</button>
   </body>
 </html>
 {{ end }}
