@@ -21,7 +21,7 @@
 </html>
 {{ end }} 
 {{ block "form" . }}
-<form hx-post="/contacts">
+<form hx-target="body" hx-post="/contacts">
   name: <input type="text" name="name" /> 
   email: <input type="text" name="email" />
   <button type="submit">Create Contact</button>
